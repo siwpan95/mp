@@ -1,6 +1,7 @@
 # mp
 
 随机音乐生成器 + WMP 风格可视化，纯 Python 标准库实现（tkinter 图形界面）。
+独立仓 siwpan/mp（本地 `G:\repos\mp`）。
 
 ## 类型
 代码项目（Python）
@@ -16,3 +17,15 @@
 
 ## 测试状态
 5 个脚本全部通过 py_compile 语法检查（syntax_ok）；GUI 未运行。
+
+## 运行
+
+```bash
+python orc.py      # 迭代终点版（多效果可视化）
+python autoav.py   # 早期版（多乐器模拟）
+```
+
+## 发布面与许可
+
+- gitee：siwpan/mp，release `v1.0.0`（便携源码 zip）。
+- 许可：MIT · Copyright (c) 2026 siwpan
