@@ -1,7 +1,10 @@
 # mp
 
+> 仓库：<https://gitee.com/siwpan/mp> ｜ 许可：MIT（见 [LICENSE](LICENSE)）
+> 注：文中 <PATH> 为路径占位符，请替换为你本机实际的目录 / 可执行文件路径。
+
 随机音乐生成器 + WMP 风格可视化，纯 Python 标准库实现（tkinter 图形界面）。
-独立仓 siwpan/mp（本地 `G:\repos\mp`）。
+独立仓 siwpan/mp（本地 `<PATH>`）。
 
 ## 类型
 代码项目（Python）
