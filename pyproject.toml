@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "musicpipeline"
+version = "1.0.0"
+description = "随机音乐生成器 + WMP 风格可视化（纯标准库，tkinter GUI）"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [{ name = "siwpan" }]
+keywords = ["music", "generator", "wav", "visualization", "tkinter"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://gitee.com/siwpan/mp"
+Repository = "https://gitee.com/siwpan/mp"
+Changelog = "https://gitee.com/siwpan/mp/blob/master/CHANGELOG.md"
+
+[tool.setuptools]
+py-modules = ["autoav", "autoavmaker", "just", "musav", "orc"]
