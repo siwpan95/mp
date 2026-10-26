@@ -4,6 +4,13 @@
 
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [2.0.1] - 2026-10-26
+
+### Added
+- 向后兼容垫片：在分发包顶层保留 `orc.py`，重新导出 `musicpipeline` 的全部公开接口（`generate_music` / `gui_mode` / `MusicVisualizerApp` / 各合成与频谱函数 / `VIZ_MODES` 等），导入时发出 `DeprecationWarning` 提示迁移到 `import musicpipeline`。
+- 纯新增、非破坏性（`import musicpipeline` 行为不变），故为补丁版本。
+- 打包配置：`[tool.setuptools]` 增加 `py-modules = ["orc"]`（与 `packages = ["musicpipeline"]` 并存），使 `import orc` 仍可解析。
+
 ## [2.0.0] - 2026-10-26
 
 ### Changed

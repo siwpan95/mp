@@ -33,7 +33,7 @@ except (ImportError, OSError):  # pragma: no cover - 非 Windows / 无显示环�
     gui_mode = None
     VIZ_MODES = []
 
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 
 __all__ = [
     "generate_music", "gui_mode", "MusicVisualizerApp",

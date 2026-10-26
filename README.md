@@ -47,8 +47,17 @@ from musicpipeline import generate_music
 path, params = generate_music(bpm=120, n_bars=8, scale_name="大调")
 ```
 
+### 向后兼容（已废弃）
+历史代码 `import orc` 仍可工作：分发包顶层附带 `orc.py` 兼容垫片，重新导出全部公开接口。
+导入时会发出 `DeprecationWarning`，请尽快迁移到 `import musicpipeline`（垫片将在未来主版本移除）。
+
+```python
+import orc                       # DeprecationWarning：请改用 import musicpipeline
+path, params = orc.generate_music()
+```
+
 ## 发布面与许可
 
-- gitee：siwpan/mp，release `v2.0.0`（便携源码 zip）。
-- PyPI：musicpipeline 2.0.0。
+- gitee：siwpan/mp，release `v2.0.1`（便携源码 zip）。
+- PyPI：musicpipeline 2.0.1。
 - 许可：MIT · Copyright (c) 2026 siwpan

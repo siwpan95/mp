@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "musicpipeline"
-version = "2.0.0"
+version = "2.0.1"
 description = "随机音乐生成器 + WMP 风格可视化（纯标准库，tkinter GUI）"
 readme = "README.md"
 license = "MIT"
@@ -23,3 +23,4 @@ musicpipeline = "musicpipeline.__main__:main"
 
 [tool.setuptools]
 packages = ["musicpipeline"]
+py-modules = ["orc"]
