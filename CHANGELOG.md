@@ -4,6 +4,22 @@
 
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [2.0.0] - 2026-10-26
+
+### Changed
+- **破坏性变更（Breaking）**：将单文件 `orc.py` 重构为 Python 包 `musicpipeline/`，按职责拆分为多模块：
+  - `core.py`：合成引擎（音符频率表 / 音阶 / 和弦进行 / 基础波形 / 14 种乐器音色 / ADSR / 混响·滤波 / 旋律·低音·铺底·鼓轨生成 / `generate_music`）。
+  - `analysis.py`：频谱分析（Goertzel 算法 + 滑动窗口帧能量）。
+  - `visualizer.py`：tkinter GUI 与 7 种可视化效果（`MusicVisualizerApp` / `gui_mode` / `VIZ_MODES`）。
+  - `__init__.py`：公开接口与 `__version__ = "2.0.0"`；GUI 在非 Windows / 无显示环境下导入失败时降级为纯合成库。
+  - `__main__.py`：`python -m musicpipeline` 命令行入口。
+- 公开接口由 `import orc` 变更为 `import musicpipeline`；新增 console_script 入口 `musicpipeline`。
+- `generate_music` 默认输出目录由「脚本所在目录」改为「当前工作目录」，避免污染安装位置。
+- 打包配置：`py-modules = ["orc"]` → `packages = ["musicpipeline"]`；新增 `[project.scripts]`。
+
+### Removed
+- 删除单文件 `orc.py`（功能已 100% 迁移至 `musicpipeline/` 包，旧历史仍可从 git 恢复）。
+
 ## [1.1.0] - 2026-10-26
 
 ### Changed
