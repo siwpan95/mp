@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "musicpipeline"
-version = "1.0.0"
+version = "1.1.0"
 description = "随机音乐生成器 + WMP 风格可视化（纯标准库，tkinter GUI）"
 readme = "README.md"
 license = "MIT"
@@ -19,4 +19,4 @@ Repository = "https://gitee.com/siwpan/mp"
 Changelog = "https://gitee.com/siwpan/mp/blob/master/CHANGELOG.md"
 
 [tool.setuptools]
-py-modules = ["autoav", "autoavmaker", "just", "musav", "orc"]
+py-modules = ["orc"]

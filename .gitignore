@@ -3,3 +3,14 @@
 # 未跟踪产物/输出治理（2026-08-28）
 __pycache__/
 release/
+
+# 音频产物（生成器输出，不入库）
+*.wav
+*.mp3
+*.flac
+mumu/
+
+# 构建产物
+dist/
+build/
+*.egg-info/

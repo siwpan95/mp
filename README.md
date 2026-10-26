@@ -10,25 +10,25 @@
 代码项目（Python）
 
 ## 目录要点
-- autoav.py / autoavmaker.py / just.py / musav.py / orc.py：功能逐步增强的生成器迭代（多乐器模拟、鼓与和弦铺底、时长控制、多效果可视化）
-- music_20260614_*.wav / music_v2_*.wav：生成的示例 WAV 输出
-- mu.json：配置/数据
-- mumu/：辅助目录
+- orc.py：统一音乐生成器 + 多乐器模拟 + 鼓与和弦铺底 + WMP 风格可视化（5 个渐进迭代已整合去重为单文件）
+- *.wav / *.mp3：生成的音频产物（已 gitignore，不入库）
+- mumu/：本地采样/素材目录（音频产物，已 gitignore）
 
 ## 用途
 随机生成音乐并做可视化演示，导出 WAV 文件，无外部依赖。
 
 ## 测试状态
-5 个脚本全部通过 py_compile 语法检查（syntax_ok）；GUI 未运行。
+orc.py 通过 py_compile 语法检查；无 GUI 冒烟测试可生成有效 WAV；GUI 未运行。
 
 ## 运行
 
 ```bash
-python orc.py      # 迭代终点版（多效果可视化）
-python autoav.py   # 早期版（多乐器模拟）
+python orc.py            # 启动图形界面（默认）
+python orc.py --random   # 直接随机生成一首 wav
+python orc.py --batch 5  # 批量生成 5 首
 ```
 
 ## 发布面与许可
 
-- gitee：siwpan/mp，release `v1.0.0`（便携源码 zip）。
+- gitee：siwpan/mp，release `v1.1.0`（便携源码 zip）。
 - 许可：MIT · Copyright (c) 2026 siwpan
